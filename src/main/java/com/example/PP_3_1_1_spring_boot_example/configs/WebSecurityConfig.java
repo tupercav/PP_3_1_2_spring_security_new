@@ -50,19 +50,6 @@ public class WebSecurityConfig extends WebSecurityConfigurerAdapter {
                 .logout()
                 .logoutSuccessUrl("/")
                 .permitAll();
-//                .csrf().disable()
-//                .authorizeRequests()
-//                .antMatchers("/login").permitAll()
-//                .antMatchers("/user").permitAll()
-//                .antMatchers("/admin/**").permitAll()
-//                .anyRequest().authenticated()
-//                .and()
-//                .formLogin().successHandler(successUserHandler)
-//                .permitAll()
-//                .and()
-//                .logout()
-//                .logoutSuccessUrl("/")
-//                .permitAll();
     }
 
 

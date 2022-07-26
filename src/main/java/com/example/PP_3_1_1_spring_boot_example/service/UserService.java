@@ -11,7 +11,6 @@ import javax.annotation.security.RolesAllowed;
 import javax.transaction.Transactional;
 import java.util.List;
 
-@Transactional
 @Component
 public class UserService {
     private UserRepository userRepository;
@@ -33,10 +32,12 @@ public class UserService {
         return userRepository.getOne(id);
     }
 
+    @Transactional
     public void deleteUserById (int id) {
         userRepository.deleteById(id);
     }
 
+    @Transactional
     public void saveUser (User user) {
         userRepository.save(user);
     }
